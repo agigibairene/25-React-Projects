@@ -7,7 +7,7 @@ import Humidity from "../assets/images/humidity.png";
 
 export default function Weather(){
     const [weatherInfo, setWeatherInfo] = useState();
-    const [cityName, setCityName] = useState("kigali");
+    const [cityName, setCityName] = useState("");
     const [displayDetails, setDisplayDetails] = useState()
 
     const fetchData = async () =>{
@@ -30,7 +30,7 @@ export default function Weather(){
     return (
         <div className="container">
             <div className="head">
-            <input value={cityName} onChange={(e) =>setCityName(e.target.value)}/>
+            <input value={cityName} placeholder="enter city name" onChange={(e) =>setCityName(e.target.value)}/>
             <button onClick={()=> {setDisplayDetails(true); fetchData()}}><img src={searchLogo} /></button>
             </div>
 
