@@ -23,18 +23,18 @@ export default function Weather(){
         }
     }
 
-    useEffect(() => {
-        fetchData()
-    }, [cityName])
+    // useEffect(() => {
+    //     fetchData()
+    // }, [cityName])
 
     return (
         <div className="container">
             <div className="head">
             <input value={cityName} onChange={(e) =>setCityName(e.target.value)}/>
-            <button onClick={(value)=>setDisplayDetails(!value)}><img src={searchLogo} /></button>
+            <button onClick={()=> {setDisplayDetails(true); fetchData()}}><img src={searchLogo} /></button>
             </div>
 
-            { weatherInfo && <div className={ displayDetails ? "weather": "hidden"}>
+            { weatherInfo && <div className={displayDetails ? "weather" : "hidden"}>
                 <img src={Clouds} className="weather-icon"/>
                 <h1  className="temperature">{weatherInfo?.main.temp}°C</h1>
                 <h2 className="city">{weatherInfo?.name}</h2>
