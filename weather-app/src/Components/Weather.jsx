@@ -1,9 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import searchLogo from "../assets/images/search.png";
 import "./style.css";
-import Clouds from "../assets/images/clouds.png";
-import Wind from "../assets/images/wind.png";
-import Humidity from "../assets/images/humidity.png";
+
+
+const ImageSources = {
+    Clouds: "src/assets/images/clouds.png",
+    wind: "src/assets/images/wind.png",
+    humidity: "src/assets/images/humidity.png",
+    mist: "src/assets/images/mist.png",
+    Rain: "src/assets/images/rain.png",
+    Snow: "src/assets/images/snow.png",
+    Drizzle: "src/assets/images/drizzle.png",
+    Clear: "src/assets/images/clear.png"
+}
 
 export default function Weather(){
     const [weatherInfo, setWeatherInfo] = useState();
@@ -35,12 +44,12 @@ export default function Weather(){
             </div>
 
             { weatherInfo && <div className={displayDetails ? "weather" : "hidden"}>
-                <img src={Clouds} className="weather-icon"/>
+                <img src={ImageSources[weatherInfo?.weather[0].main]} className="weather-icon"/>
                 <h1  className="temperature">{weatherInfo?.main.temp}°C</h1>
                 <h2 className="city">{weatherInfo?.name}</h2>
                 <div className="details">
                     <div className="humidity">
-                        <img src={Humidity}/>
+                        <img src={ImageSources.humidity}/>
                         <div>
                             <p className="hum-value">{weatherInfo?.main.humidity}%</p>
                             <p>Humidity</p>
@@ -48,7 +57,7 @@ export default function Weather(){
                     </div>
 
                     <div className="wind">
-                        <img src={Wind}/>
+                        <img src={ImageSources.wind}/>
                         <div>
                         <p className="wind-value">{weatherInfo?.wind.speed}km/h</p>
                         <p>Wind</p>
