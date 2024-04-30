@@ -49,6 +49,7 @@ input{
     background: #ebfffc;
     color: #555;
     font-size: 18px;
+    text-transform: lowercase;
 }
 
 .hidden{
