@@ -33,6 +33,7 @@ const InputWrapper = Styled.div`
 export default function GitHubProfileFinder(){
     const [userName, setUserName] = useState();
     const [userData, setUserData] = useState();
+    const [display, setDisplay] = useState(false);
 
     const fetchGitHubUserData = async () =>{
         try{
@@ -59,11 +60,11 @@ export default function GitHubProfileFinder(){
         <StyledContainer>
             <InputWrapper>
                <input name="search-by-name" type="text" placeholder="Search GitHub Username" value={userName} onChange={(e) =>setUserName(e.target.value)}/>
-               <button onClick={handleSubmit}>Search</button>
+               <button onClick={()=>{setDisplay(true);handleSubmit()}}>Search</button>
             </InputWrapper>
             
             {
-                userData && <User userInfo={userData}/>
+                userData && <User userInfo={userData} displayInfo={display}/>
             }
            
         </StyledContainer>

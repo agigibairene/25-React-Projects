@@ -3,7 +3,7 @@ body{
     justify-content: center;
     /* align-items: center; */
     min-height: 100vh;
-    
+
 }
 
 input{
@@ -17,4 +17,29 @@ input{
     padding: 15px;
     border-radius: 10px;
     border: 1px solid;
+    width: 550px;
+    height: 400px;
+    text-align: center;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    gap: 20px;
+}
+
+p span{
+    font-weight: 900;
+}
+
+a{
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 1rem;
+}
+
+
+.hidden{
+    display: none;
 }
