@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
+    
+}
+
+input{
+    margin-right: 2rem;
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+    border: none;
+}
+
+.user{
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid;
+}
