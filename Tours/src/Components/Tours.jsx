@@ -4,6 +4,7 @@ import "./style.css"
 export default function Tours(){
 
     const [fetchedData, setFetchData] = useState();
+    const [readMore, setReadMore] = useState(false);
     
     const FetchData = async () => {
         try{
@@ -22,18 +23,29 @@ export default function Tours(){
     }, [])
 
 
+    const toggleReadMore = (index) => {
+        setReadMore(prevState => {
+            const newList = [...prevState];
+            newList[index] = !newList[index];
+            return newList;
+        });
+    }
+
     return (
         <div className="wrapper">
             {/* <h2>Our Tours</h2> */}
             {
                 fetchedData && fetchedData.map(tour => <div key={tour.id} className="tour-div">
-                    <div>
+                    <div >
                        <img src={tour.image} alt={tour.name}/>
                        <p className="price">${tour.price}</p>
                        <div className="text">
                             <h3>{tour.name}</h3>
-                            <p>{tour.info}</p>
-                            <button>Not interested</button>
+                            <p>
+                                {readMore ? tour.info : `${tour.info.substring(0, 200)}`}
+                                <button className="read" onClick={()=>setReadMore(read => !read)}>{readMore ? "show less" : "read more..."}</button>
+                            </p>
+                            <button  className="btn" onClick={() => toggleReadMore(tour.id)}>Not interested</button>
                         </div>
                     </div>
                 </div>)
