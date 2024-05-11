@@ -8,7 +8,7 @@ export default function Review(){
 
 
     function scrollForward(){
-        if (index === (reviews.length - 1)){
+        if (index >= (reviews.length - 1)){
             setIndex(0);
         }
         else{
@@ -17,15 +17,16 @@ export default function Review(){
     }
 
     function scrollBack(){
-        if (index ===0){
-            setIndex(reviews.length);
+        if (index <= 0){
+            setIndex(reviews.length - 1);
         }
-        setIndex(count => count - 1);
+        else{
+            setIndex(count => count - 1);
+        }
     }
 
     function randomReviewGenerator(){
         const randomNumber = Math.floor(Math.random() * reviews.length);
-
         setIndex(randomNumber);
     }
 
