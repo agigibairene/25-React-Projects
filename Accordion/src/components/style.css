@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{   
+    --White: hsl(0, 0%, 100%);
+    --Light_pink: hsl(275, 100%, 97%);
+    --Grayish_purple: hsl(292, 16%, 49%);
+    --Dark_purple: hsl(292, 42%, 14%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Work Sans", sans-serif;
+    background: var(--Light_pink);
+    font-size: 16px;
+}
+
+.bg-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../assets/images/background-pattern-desktop.svg");
+    height: 250px;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.container{
+    width: 500px;
+    background-color: var(--White);
+    margin-top: 5rem;
+    padding: 2.5rem;
+    border-radius: 0.7rem;
+}
+
+.ques{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 1rem; 
+}
+
+hr{
+    margin-top: 0.9rem;
+    color: var(--White);
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: var(--Dark_purple);
+    font-size: 3rem;
+}
+
+h1 img{
+    margin-right: 1.5rem;
+}
+
+h4{
+    color: var(--Dark_purple);
+}
+
+p{
+    margin: 1rem 0;
+}
+
+
+
