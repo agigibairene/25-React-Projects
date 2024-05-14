@@ -23,19 +23,13 @@ export default function Tours(){
     }, [])
 
 
-    const toggleReadMore = (index) => {
-        setReadMore(prevState => {
-            const newList = [...prevState];
-            newList[index] = !newList[index];
-            return newList;
-        });
-    }
+
 
     return (
         <div className="wrapper">
             {/* <h2>Our Tours</h2> */}
             {
-                fetchedData && fetchedData.map(tour => <div key={tour.id} className="tour-div">
+                fetchedData && fetchedData.map((tour) => <div key={tour.id} className="tour-div">
                     <div >
                        <img src={tour.image} alt={tour.name}/>
                        <p className="price">${tour.price}</p>
@@ -43,9 +37,9 @@ export default function Tours(){
                             <h3>{tour.name}</h3>
                             <p>
                                 {readMore ? tour.info : `${tour.info.substring(0, 200)}`}
-                                <button className="read" onClick={()=>setReadMore(read => !read)}>{readMore ? "show less" : "read more..."}</button>
+                                <button className="read">{readMore ? "show less" : "read more..."}</button>
                             </p>
-                            <button  className="btn" onClick={() => toggleReadMore(tour.id)}>Not interested</button>
+                            <button  className="btn" >Not interested</button>
                         </div>
                     </div>
                 </div>)
