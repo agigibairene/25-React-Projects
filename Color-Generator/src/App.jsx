@@ -1,9 +1,10 @@
+import ColorGenerator from "./Components/ColorGenerator"
 
 function App() {
 
   return (
     <>
-     
+     <ColorGenerator />
     </>
   )
 }
