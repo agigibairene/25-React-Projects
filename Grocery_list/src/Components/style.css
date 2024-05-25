@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f8fafc;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section{
+    background: #fff;
+    width: 500px;
+    height: auto;
+    margin-top: 5rem;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+}
+
+h1{
+    text-align: center;
+}
+
+form{
+    text-align: center;
+    margin: 1rem 0;
+}
+
+form input{
+    padding: 0.6rem 1.2rem;
+    outline: none;
+    width: 75%;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius:0.25rem ;
+}
+
+form button{
+    padding: 0.6rem 0.8rem;
+    background: #06b6d4;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius:0.25rem ;
+}
+
+.item{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    margin: 1rem 1rem;
+}
+
+.item p{
+    margin-left: 0.4rem;
+    font-size: 20px;
+}
+
+.item button{
+    letter-spacing: 1.2px;
+    border: none;
+    font-size: 1.1rem;
+    color: #000;
+    border-radius: 0.2rem;
+    background: none;
+}
+
+.edit-btn{
+    margin-right: 0.5rem;
+    color: green;
+    cursor: pointer;
+}
+
+.delete-btn{
+    color: red;
+    cursor: pointer;
+}
