@@ -14,7 +14,7 @@ body{
 }
 
 .section{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -33,7 +33,11 @@ h1{
 }
 
 .toggle{
-    margin-left: 1rem;
+    margin-left: 10rem;
+    padding: 0.6rem;
+    border: none;
+    letter-spacing: 1.5px;
+    cursor: pointer;
 }
 
 .data{

@@ -46,7 +46,7 @@ export default function Tabs(){
             <div className="container">
             <h1>Experience</h1>
                 <div className="Underline"></div>
-            <button className="toggle" onClick={toggle}>Toggle theme</button>
+            <button className="toggle" onClick={toggle}>{theme === "dark" ? "Light Mode" : "Dark mode"}</button>
             <div className="data">
 
              <article className="tabs">
